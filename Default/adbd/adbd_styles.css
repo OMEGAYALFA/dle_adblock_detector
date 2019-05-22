@@ -1,0 +1,113 @@
+.adbd-active body {
+	z-index: 25;
+}
+
+.adbd-filter {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	visibility: hidden;
+	opacity: 0;
+	background: rgba( 0, 0, 0, 0.5 );
+	position: fixed;
+	width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
+
+.adbd-active .adbd-filter {
+	visibility: visible;
+	opacity: 1;
+}
+
+.adbd-contents {
+	position: relative;
+	z-index: 1;
+}
+
+.adbd-active .adbd-contents {
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-ms-filter: blur(2px);
+	-o-filter: blur(2px);
+	filter: blur(2px);
+}
+
+.no-blur.adbd-active .adbd-contents {
+	-webkit-filter: none;
+	-moz-filter: none;
+	-ms-filter: none;
+	-o-filter: none;
+	filter: none;
+}
+
+.adbd-popup {
+	position: absolute;
+	width: 400px;
+    /*height: 105px;*/
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -200px;
+	visibility: hidden;
+	opacity: 0;
+	z-index: 101;
+	padding: 20px;
+
+	background: white;
+	box-shadow: 0px 0px 20px rgba( 0, 0, 0, 0.6 );
+	
+	border-radius: 5px;
+
+	-webkit-transform: scale( 0.5 );
+	-moz-transform: scale( 0.5 );
+	-ms-transform: scale( 0.5 );
+	-o-transform: scale( 0.5 );
+	transform: scale( 0.5 );
+}
+
+.adbd-popup > button {
+	/*width: 75px;*/
+    height: 30px;
+    text-align: center;
+    margin: 10px auto 0px auto;
+    display: block;
+    padding: 0;
+}
+
+.adbd-popup > h2 {
+	margin: 0;
+    padding: 0;
+}
+
+.adbd-popup > p {
+	margin: 5px 2px 7px 2px;
+}
+
+.adbd-active .adbd-popup {
+	visibility: visible;
+	opacity: 1;
+	position: fixed;
+}
+
+.adbd-active .adbd-popup.stack {
+	-webkit-transform: scale( 1 );
+	-moz-transform: scale( 1 );
+	-ms-transform: scale( 1 );
+	-o-transform: scale( 1 );
+	transform: scale( 1 );
+}
+
+.adbd-ready .adbd-popup{
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-o-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+
+	-webkit-transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	-moz-transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	-ms-transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	-o-transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+	transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
